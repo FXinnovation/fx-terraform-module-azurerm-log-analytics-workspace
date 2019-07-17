@@ -12,6 +12,7 @@
 resource_group_name  = attribute('resource_group_name')
 location             = attribute('location')
 name                 = attribute('name')
+enabled              = attribute('enabled')
 
 ###
 # Controls
@@ -23,8 +24,10 @@ control 'log_analytic-workspace' do
   tag    'log_analytic_workspace'
 
   describe azure_generic_resource(group_name: resource_group_name, name: name) do
-    it              { should exist }
-    it              { should have_tags }
-    its('location') { should cmp location }
+    it                   { should exist }
+    it                   { should have_tags }
+    its('location')      { should cmp location }
+    its('tags')          { should include "Terraform" }
+    its('terraform_tag') { should cmp "true"}
   end
 end
