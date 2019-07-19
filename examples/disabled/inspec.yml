@@ -1,10 +1,10 @@
-name: azurerm-log-analytics-workspace-example-default
-title: Azure Log Analytics Workspace Default Example
+name: azurerm-log-analytics-workspace-example-disabled
+title: Azure Log Analytics Workspace Disabled Example
 maintainer: FXinnovation, Inc.
 copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
-summary: Inspec for azurerm-log-analytics-workspace-example-default terraform module
+summary: Inspec for azurerm-log-analytics-workspace-example-disabled terraform module example
 version: 0.1.0
 depends:
   - name: azurerm-log-analytics-workspace
@@ -16,20 +16,20 @@ supports:
 attributes:
   # log-analytics-workspace attributes
   - name: name
-    value: 'terraform-test-workspace-default'
+    value: 'terraform-test-workspace-disabled'
     child: azurerm-log-analytics-workspace
   - name: location
     value: 'canadacentral'
     child: azurerm-log-analytics-workspace
   - name: resource_group_name
-    value: 'terraform-test-workspace-default'
+    value: 'terraform-test-workspace-disabled'
     child: azurerm-log-analytics-workspace
   - name: enabled
-    value: true
+    value: false
     child: azurerm-log-analytics-workspace
   # resource-group attributes
   - name: name_prefix
-    value: 'terraform-test-workspace-default'
+    value: 'terraform-test-workspace-disabled'
     child: azurerm-resource-group
   - name: location
     value: 'canadacentral'
