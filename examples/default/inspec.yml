@@ -16,6 +16,7 @@ depends:
 supports:
   - platform: azure
 attributes:
+  # log-analytics-workspace attributes
   - name: name
     value: 'terraform-test-workspace-default'
     child: azurerm-log-analytics-workspace
@@ -28,6 +29,7 @@ attributes:
   - name: enabled
     value: true
     child: azurerm-log-analytics-workspace
+  # resource-group attributes
   - name: name_prefix
     value: 'terraform-test-workspace-default'
     child: azurerm-resource-group
