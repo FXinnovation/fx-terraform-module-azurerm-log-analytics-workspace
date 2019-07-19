@@ -3,7 +3,7 @@
 # controls::default
 #
 # author:cloudsquad@fxinnovation.com
-# description: Controls for resource groups in Azure
+# description: Controls for log-analytics-workspace in Azure
 #
 
 ###
@@ -29,5 +29,9 @@ control 'log_analytic-workspace' do
     its('location')      { should cmp location }
     its('tags')          { should include "Terraform" }
     its('terraform_tag') { should cmp "true"}
-  end
+  end if enabled
+
+  describe azure_generic_resource(group_name: resource_group_name, name: name) do
+    it                   { should_not exist }
+  end unless enabled
 end
