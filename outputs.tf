@@ -19,7 +19,7 @@ output "primary_shared_key" {
   )
 }
 
-output "primary_shared_key" {
+output "secondary_shared_key" {
   sensitive = true
   value = element(
     concat(

@@ -21,7 +21,7 @@ Terraform module to help deploy a log analyticsworkspace on Azure.
 | id |  |
 | portal\_url |  |
 | primary\_shared\_key |  |
-| primary\_shared\_key |  |
+| secondary\_shared\_key |  |
 | workspace\_id |  |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
