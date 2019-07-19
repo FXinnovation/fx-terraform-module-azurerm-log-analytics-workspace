@@ -10,11 +10,6 @@ resource "azurerm_log_analytics_workspace" "nonfree" {
     { "Terraform" = "true" },
     var.tags
   )
-
-  timeouts {
-    create = "60m"
-    delete = "60m"
-  }
 }
 
 resource "azurerm_log_analytics_workspace" "free" {
@@ -28,9 +23,4 @@ resource "azurerm_log_analytics_workspace" "free" {
     { "Terraform" = "true" },
     var.tags
   )
-
-  timeouts {
-    create = "60m"
-    delete = "60m"
-  }
 }
