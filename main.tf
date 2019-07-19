@@ -1,5 +1,5 @@
 resource "azurerm_log_analytics_workspace" "nonfree" {
-  count               = var.enabled == false && var.sku != "free" ? 0 : 1
+  count               = var.enabled && var.sku != "free" ? 1 : 0
   name                = var.name
   location            = var.location
   resource_group_name = var.resource_group_name
@@ -18,7 +18,7 @@ resource "azurerm_log_analytics_workspace" "nonfree" {
 }
 
 resource "azurerm_log_analytics_workspace" "free" {
-  count               = var.enabled == false && var.sku == "free" ? 0 : 1
+  count               = var.enabled && var.sku == "free" ? 1 : 0
   name                = var.name
   location            = var.location
   resource_group_name = var.resource_group_name
