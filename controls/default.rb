@@ -29,8 +29,4 @@ control 'log_analytics-workspace' do
     its('tags')          { should include "Terraform" }
     its('Terraform_tag') { should cmp "true"}
   end if enabled
-
-  describe azure_generic_resource(group_name: resource_group_name, name: name) do
-    it { should_not exist }
-  end unless enabled
 end
