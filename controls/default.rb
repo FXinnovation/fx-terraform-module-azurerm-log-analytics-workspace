@@ -23,21 +23,14 @@ control 'log_analytics-workspace' do
   tag    'azurerm'
   tag    'log_analytics_workspace'
 
-  describe azure_generic_resource(
-    group_name: resource_group_name,
-    name: name
-  ) do
-    it                   { should exist }
+  describe azure_generic_resource(group_name: resource_group_name, name: name) do
     it                   { should have_tags }
     its('location')      { should cmp location }
     its('tags')          { should include "Terraform" }
     its('Terraform_tag') { should cmp "true"}
   end if enabled
 
-  describe azure_generic_resource(
-    group_name: resource_group_name,
-    name: name
-  ) do
+  describe azure_generic_resource(group_name: resource_group_name, name: name) do
     it { should_not exist }
   end unless enabled
 end
