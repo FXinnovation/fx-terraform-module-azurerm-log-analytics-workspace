@@ -17,21 +17,27 @@ enabled              = attribute('enabled')
 ###
 # Controls
 ###
-control 'log_analytic-workspace' do
+control 'log_analytics-workspace' do
   impact 1.0
-  title  'Check the azure log analytic workspace'
+  title  'Check the azure log analytics workspace'
   tag    'azurerm'
-  tag    'log_analytic_workspace'
+  tag    'log_analytics_workspace'
 
-  describe azure_generic_resource(group_name: resource_group_name, name: name) do
+  describe azure_generic_resource(
+    group_name: resource_group_name,
+    name: name
+  ) do
     it                   { should exist }
     it                   { should have_tags }
     its('location')      { should cmp location }
     its('tags')          { should include "Terraform" }
-    its('terraform_tag') { should cmp "true"}
+    its('Terraform_tag') { should cmp "true"}
   end if enabled
 
-  describe azure_generic_resource(group_name: resource_group_name, name: name) do
-    it                   { should_not exist }
+  describe azure_generic_resource(
+    group_name: resource_group_name,
+    name: name
+  ) do
+    it { should_not exist }
   end unless enabled
 end
