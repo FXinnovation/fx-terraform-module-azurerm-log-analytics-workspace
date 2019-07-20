@@ -17,20 +17,23 @@ attributes:
   # log-analytics-workspace attributes
   - name: name
     value: 'terraform-test-workspace-disabled'
-    child: azurerm-log-analytics-workspace
+    profile: azurerm-log-analytics-workspace
   - name: location
     value: 'canadacentral'
-    child: azurerm-log-analytics-workspace
+    profile: azurerm-log-analytics-workspace
   - name: resource_group_name
     value: 'terraform-test-workspace-disabled'
-    child: azurerm-log-analytics-workspace
+    profile: azurerm-log-analytics-workspace
   - name: enabled
     value: false
-    child: azurerm-log-analytics-workspace
+    profile: azurerm-log-analytics-workspace
   # resource-group attributes
   - name: name_prefix
     value: 'terraform-test-workspace-disabled'
-    child: azurerm-resource-group
+    profile: azurerm-resource-group
   - name: location
     value: 'canadacentral'
-    child: azurerm-resource-group
+    profile: azurerm-resource-group
+  - name: enabled
+    value: false
+    profile: azurerm-resource-group
