@@ -35,5 +35,5 @@ attributes:
     value: 'canadacentral'
     profile: azurerm-resource-group
   - name: enabled
-    value: true
+    value: false
     profile: azurerm-resource-group
