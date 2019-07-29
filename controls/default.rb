@@ -9,10 +9,10 @@
 ###
 # Attributes handling
 ###
-resource_group_name  = attribute('resource_group_name')
-location             = attribute('location')
-name                 = attribute('name')
-enabled              = attribute('enabled')
+resource_group_name  = input('resource_group_name')
+location             = input('location')
+name                 = input('name')
+enabled              = input('enabled')
 
 ###
 # Controls
