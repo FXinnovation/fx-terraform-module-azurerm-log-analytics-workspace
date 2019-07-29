@@ -15,6 +15,10 @@ control 'log_analytics-workspace' do
   tag    'azurerm'
   tag    'log_analytics_workspace'
 
+  only_if('module is disabled') do
+    input('enabled')
+  end
+
   describe azure_generic_resource(
     group_name: input('resource_group_name'),
     name: input('name')
@@ -23,5 +27,5 @@ control 'log_analytics-workspace' do
     its('location')      { should cmp input('location') }
     its('tags')          { should include "Terraform" }
     its('Terraform_tag') { should cmp "true"}
-  end if input('enabled')
+  end
 end
