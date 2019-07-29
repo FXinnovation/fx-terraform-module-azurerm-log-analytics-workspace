@@ -9,7 +9,6 @@
 ###
 # Resource Group Profile
 ###
-puts input_object('enabled', profile: 'azurerm-resource-group').diagnostic_string
 input(
   'name',
   value: input('resource_group_name'),
