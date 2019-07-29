@@ -5,15 +5,16 @@ copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
 summary: Inspec for azurerm-log-analytics-workspace-example-default terraform module
-version: 0.1.0
+version: 0.2.0
 depends:
   - name: azurerm-log-analytics-workspace
     path: ../../
   - name: azurerm-resource-group
-    url: https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-public/terraform-module-azurerm-resource-group/archive/hotfix/naming.tar.gz
+    url: https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-public/terraform-module-azurerm-resource-group/archive/0.2.0.tar.gz
 supports:
   - platform: azure
 inputs:
+  # log analytics workspace
   - name: name
     value: 'terraform-test-workspace-default'
     profile: azurerm-log-analytics-workspace
@@ -26,3 +27,10 @@ inputs:
   - name: enabled
     value: true
     profile: azurerm-log-analytics-workspace
+  # resource group
+  - name: enabled
+    value: true
+    profile: azurerm-resource-group
+  - name: name
+    value: 'terraform-test-workspace-default'
+    profile: azurerm-resource-group

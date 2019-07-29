@@ -26,3 +26,9 @@ inputs:
   - name: enabled
     value: false
     profile: azurerm-log-analytics-workspace
+  - name: enabled
+    value: false
+    profile: azurerm-resource-group
+  - name: name
+    value: 'terraform-test-workspace-disabled'
+    profile: azurerm-resource-group
