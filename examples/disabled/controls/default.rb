@@ -6,5 +6,25 @@
 # description:: Inspec controls for resource group disabled example
 #
 
+###
+# Resource Group Profile
+###
+input(
+  'name',
+  value: input('resource_group_name'),
+  profile: 'azurerm-resource-group',
+  priority: 45
+)
+input(
+  'enabled',
+  value: input('enabled'),
+  profile: 'azurerm-resource-group',
+  priority: 45
+)
+
 include_controls 'azurerm-resource-group'
+
+###
+# Log Analytics Workspace Profile
+###
 include_controls 'azurerm-log-analytics-workspace'

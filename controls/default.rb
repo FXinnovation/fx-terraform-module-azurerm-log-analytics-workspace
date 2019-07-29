@@ -7,14 +7,6 @@
 #
 
 ###
-# Attributes handling
-###
-resource_group_name  = input('resource_group_name')
-location             = input('location')
-name                 = input('name')
-enabled              = input('enabled')
-
-###
 # Controls
 ###
 control 'log_analytics-workspace' do
@@ -23,10 +15,13 @@ control 'log_analytics-workspace' do
   tag    'azurerm'
   tag    'log_analytics_workspace'
 
-  describe azure_generic_resource(group_name: resource_group_name, name: name) do
+  describe azure_generic_resource(
+    group_name: input('resource_group_name'),
+    name: input('name')
+  ) do
     it                   { should have_tags }
-    its('location')      { should cmp location }
+    its('location')      { should cmp input('location') }
     its('tags')          { should include "Terraform" }
     its('Terraform_tag') { should cmp "true"}
-  end if enabled
+  end if input('enabled')
 end
