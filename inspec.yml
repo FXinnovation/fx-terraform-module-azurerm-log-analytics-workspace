@@ -22,6 +22,6 @@ inputs:
     required: true
     profile: azurerm-log-analtyics-workspace
   - name: enabled
-    description: Wheter the log analytics workspace is deployed or not.
+    description: Whether the log analytics workspace is deployed or not.
     required: true
     profile: azurerm-log-analytics-workspace
