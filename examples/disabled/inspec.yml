@@ -5,12 +5,12 @@ copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
 summary: Inspec for azurerm-log-analytics-workspace-example-disabled terraform module example
-version: 0.2.0
+version: 0.5.0
 depends:
   - name: azurerm-log-analytics-workspace
     path: ../../
   - name: azurerm-resource-group
-    url: https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-public/terraform-module-azurerm-resource-group/archive/0.2.0.tar.gz
+    url: https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-public/terraform-module-azurerm-resource-group/archive/1.0.0.tar.gz
 supports:
   - platform: azure
 inputs:
