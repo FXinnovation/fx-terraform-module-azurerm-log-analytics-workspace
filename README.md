@@ -38,3 +38,13 @@ Terraform module to help deploy a log analyticsworkspace on Azure.
 | workspace\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Inspec
+This module ships some inspec tests. You can depend on this repository for the inspec tests and load the profile.
+
+## Attributes
+| Name | Description |
+| ---- | ----------- |
+| name | Name of the log analytics workspace. |
+| location | Location of the log analytics workspace. |
+| resource_group_name | Name of the resource group in which the log analytics workspace resides. |
