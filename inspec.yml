@@ -1,0 +1,30 @@
+name: azurerm-log-analytics-workspace
++
+title: Azure Log Analytics Workspace
++
+maintainer: FXinnovation, Inc.
++
+copyright: FXinnovaion, Inc.
+copyright_email: cloudsquad@fxinnovation.com
+license: MIT
+summary: Inspec for azurerm-log-analytics-workspace terraform module
+version: 0.2.0
+supports:
+  - platform: azure
+inputs:
+  - name: name
+    description: Name of the log analytics workspace.
+    required: true
+    profile: azurerm-log-analytics-workspace
+  - name: location
+    description: Location of the log analytics workspace.
+    required: true
+    profile: azurerm-log-analytics-workspace
+  - name: resource_group_name
+    description: Name of the resource group in which the log analytics workspace is deployed.
+    required: true
+    profile: azurerm-log-analtyics-workspace
+  - name: enabled
+    description: Whether the log analytics workspace is deployed or not.
+    required: true
+    profile: azurerm-log-analytics-workspace
