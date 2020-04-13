@@ -1,9 +1,6 @@
 name: azurerm-log-analytics-workspace
-+
 title: Azure Log Analytics Workspace
-+
 maintainer: FXinnovation, Inc.
-+
 copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
