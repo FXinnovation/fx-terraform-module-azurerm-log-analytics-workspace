@@ -1,5 +1,5 @@
 module "resource_group" {
-  source = "git::ssh://git@scm.dazzlingwrench.fxinnovation.com:2222/fxinnovation-public/terraform-module-azurerm-resource-group.git?ref=0.1.0"
+  source = "git::ssh://git@github.com/FXinnovation/fx-terraform-module-azurerm-resource-group.git?ref=0.1.0"
 
   enabled = false
 
